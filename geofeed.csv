@@ -1,0 +1,13 @@
+# Self-Published IP Geolocation Feed (RFC 8805 / RFC 9632)
+# Last-Modified: 2026-05-27
+#
+# Format per RFC 8805:  prefix , country , region , city , postal
+#   country : ISO 3166-1 alpha-2
+#   region  : ISO 3166-2 (country code + "-" + subdivision code)
+#   city    : free UTF-8 text, English Title Case recommended
+#   postal  : deprecated per RFC 8805 - intentionally empty
+#
+# Discovery: this file MUST be referenced from the RIPE inetnum object
+# covering 87.58.128.0/24 via the "geofeed:" attribute, and served over
+# HTTPS at a stable URL.
+87.58.128.0/24,CH,CH-ZH,Zurich,

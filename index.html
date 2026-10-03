@@ -1,35 +1,250 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Joseki AI</title>
-    <meta name="robots" content="noindex, nofollow, noarchive">
-    <meta
-      name="description"
-      content="Sequence of fractional truths."
-    >
-    <meta name="theme-color" content="#08090b">
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    >
-    <link rel="stylesheet" href="styles.css?v=9">
-  </head>
-  <body>
-    <canvas id="motion-field" aria-hidden="true"></canvas>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Joseki — Find your edge at GPU speed</title>
+  <meta name="description" content="Joseki is GPU-native infrastructure for quant strategies: market data, signal discovery, true-to-life simulation, machine learning and backtesting, all on GPU clusters and sealed by confidential computing. Answers in seconds." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="img/favicon-32.png?v=bb30afc0" sizes="32x32" type="image/png" />
+  <link rel="icon" href="img/favicon.svg?v=612ca15e" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=7920d79d" />
+</head>
+<body>
+  <!-- Nav · N1b canonical three-section -->
+  <header class="nav" id="nav" data-scrolled="false">
+    <div class="wrap nav__row">
+      <a class="brand" href="#top" aria-label="Joseki home">
+        <img class="brand__logo" src="img/logo.svg?v=16c0c2ed" alt="Joseki" width="67" height="26" />
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav__links">
+          <li><a href="#journey">How it works</a></li>
+          <li><a href="#data">Features</a></li>
+          <li><a href="#privacy">Privacy</a></li>
+          <li><a href="#byo">Bring Yours!</a></li>
+        </ul>
+      </nav>
+      <div class="nav__cta">
+        <a class="btn btn--sm" href="mailto:hi@joseki.ai?subject=Joseki%20early%20access">Request access <span class="arrow" aria-hidden="true">→</span></a>
+        <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" id="navToggle">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
 
-    <main class="page-shell">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero__content">
-          <h1 id="hero-title">Sequence of fractional truths.</h1>
+  <main id="top">
+    <!-- Hero · statement over a full-bleed background -->
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true"><img src="img/herobg.webp?v=e2d26653" alt="" width="2000" height="1000" fetchpriority="high" decoding="async" /></div>
+      <div class="wrap hero__text">
+        <span class="badge">GPU-native infrastructure for quant strategies</span>
+        <h1 class="hero__title">Find your edge <span class="hl">at GPU speed.</span></h1>
+        <p class="hero__lede">The end-to-end platform for building quant strategies. From raw market data to battle-tested models, every step runs on GPU clusters, sealed by confidential computing. Iterate in seconds. Trade with conviction.</p>
+        <div class="hero__actions">
+          <a class="btn" href="mailto:hi@joseki.ai?subject=Joseki%20early%20access">Request early access <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn--ghost" href="#journey">Explore the platform</a>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
 
-    <script src="script.js?v=9"></script>
-  </body>
+    <!-- How it works · boxed progress rail -->
+    <section class="section wrap" id="journey">
+      <div class="head">
+        <h2>From first tick to <span class="hl">final verdict.</span></h2>
+        <p>Every stage of quantitative research, unified on GPU infrastructure. Run the whole pipeline, or plug in exactly where you need the power.</p>
+      </div>
+      <ol class="rail">
+        <li class="rail__step"><a href="#data"><h4>Ingest</h4><p>Every major market, one clean stream.</p></a></li>
+        <li class="rail__step"><a href="#features"><h4>Distill</h4><p>Raw data refined into signal.</p></a></li>
+        <li class="rail__step"><a href="#simulation"><h4>Simulate</h4><p>Markets recreated, true to life.</p></a></li>
+        <li class="rail__step"><a href="#strategy-gpu"><h4>Scale</h4><p>Thousands of scenarios, in seconds.</p></a></li>
+        <li class="rail__step"><a href="#learning"><h4>Learn</h4><p>Strategies that adapt and improve.</p></a></li>
+        <li class="rail__step"><a href="#backtesting"><h4>Validate</h4><p>Proof before capital is at risk.</p></a></li>
+      </ol>
+    </section>
+
+    <!-- Stages · bento of illustrated cards on a lavender band -->
+    <section class="band" aria-label="Each step in detail">
+      <div class="wrap bento">
+        <article class="card card--6" id="data">
+          <div class="card__text">
+            <span class="card__label">Market Data</span>
+            <h3>Capture every market <span class="hl">in full depth.</span></h3>
+            <p>Equities, futures, options, FX and digital assets, live and historical. Every trade, quote and order book, cleaned and aligned on GPU.</p>
+            <ul class="points">
+              <li><strong>Global coverage.</strong> Major asset classes and venues in one place.</li>
+              <li><strong>Live and historical.</strong> One format, real time or years back.</li>
+              <li><strong>Full depth.</strong> Every trade, quote and book level.</li>
+            </ul>
+          </div>
+          <div class="card__art"><img src="img/data.webp?v=b8095d24" alt="" width="1200" height="600" loading="lazy" decoding="async" /></div>
+        </article>
+
+        <article class="card card--6" id="features">
+          <div class="card__text">
+            <span class="card__label">Feature Extraction</span>
+            <h3>Turn raw data <span class="hl">into real signal.</span></h3>
+            <p>Distil raw data into the signals strategies trade on, from classic indicators to patterns found by machine learning, computed in parallel on GPU.</p>
+            <ul class="points">
+              <li><strong>Handcrafted or learned.</strong> Write your own, or let models find them.</li>
+              <li><strong>Computed at scale.</strong> Years of history, every instrument.</li>
+              <li><strong>Build once.</strong> The same signals in research, simulation and backtests.</li>
+            </ul>
+          </div>
+          <div class="card__art"><img src="img/features.webp?v=06950886" alt="" width="1200" height="600" loading="lazy" decoding="async" /></div>
+        </article>
+
+        <article class="card card--6" id="simulation">
+          <div class="card__text">
+            <span class="card__label">Market Simulation</span>
+            <h3>Test against a market <span class="hl">that fights back.</span></h3>
+            <p>Real trading conditions, with liquidity, order queues, fees and delays, so every order meets the friction it would face live.</p>
+            <ul class="points">
+              <li><strong>Realistic execution.</strong> Slippage, fees and delays built in.</li>
+              <li><strong>Grounded in history.</strong> Driven by recorded market data.</li>
+              <li><strong>Market-aware.</strong> Your orders compete for liquidity.</li>
+            </ul>
+          </div>
+          <div class="card__art"><img src="img/simulation.webp?v=de18be77" alt="" width="1200" height="600" loading="lazy" decoding="async" /></div>
+        </article>
+
+        <article class="card card--6" id="strategy-gpu">
+          <div class="card__text">
+            <span class="card__label">Strategy Simulation on GPU</span>
+            <h3>Test thousands of strategies <span class="hl">in seconds.</span></h3>
+            <p>Scale your backtesting with GPU clusters: thousands of strategies, parameter sets and scenarios, side by side. Search wider, iterate faster.</p>
+            <ul class="points">
+              <li><strong>Massively parallel.</strong> Thousands of simulations at once.</li>
+              <li><strong>Full parameter sweeps.</strong> Every setting, not just a few.</li>
+              <li><strong>Grows with you.</strong> From one GPU to whole clusters.</li>
+            </ul>
+          </div>
+          <div class="card__art"><img src="img/gpu.webp?v=74868965" alt="" width="1200" height="600" loading="lazy" decoding="async" /></div>
+        </article>
+
+        <article class="card card--6" id="learning">
+          <div class="card__text">
+            <span class="card__label">Machine Learning and RL</span>
+            <h3>Strategies that learn <span class="hl">as fast as markets move.</span></h3>
+            <p>Use predictive models as signals, or train reinforcement learning agents that learn when to trade, how much, and when to stand aside.</p>
+            <ul class="points">
+              <li><strong>Predictive models.</strong> Forecasts that feed trading decisions.</li>
+              <li><strong>Reinforcement learning.</strong> Agents rewarded for real performance.</li>
+              <li><strong>Bring your own.</strong> Plug in the models you have built.</li>
+            </ul>
+          </div>
+          <div class="card__art"><img src="img/learning.webp?v=104b4513" alt="" width="1200" height="600" loading="lazy" decoding="async" /></div>
+        </article>
+
+        <article class="card card--6" id="backtesting">
+          <div class="card__text">
+            <span class="card__label">Backtesting</span>
+            <h3>Every cent, <span class="hl">accounted for.</span></h3>
+            <p>A full ledger of every simulated trade, with fills, fees, rebates, funding and slippage, marked to market daily. A statement, not a guess.</p>
+            <ul class="points">
+              <li><strong>Daily P&amp;L.</strong> Every trading day at a glance.</li>
+              <li><strong>Traceable.</strong> Any number leads back to its fills.</li>
+              <li><strong>Risk in plain numbers.</strong> Sharpe, drawdown and win rate on one page.</li>
+            </ul>
+          </div>
+          <div class="card__art"><img src="img/backtest.webp?v=a77792bd" alt="" width="1200" height="600" loading="lazy" decoding="async" /></div>
+        </article>
+
+        <article class="card card--12 card--split" id="privacy">
+          <div class="card__text">
+            <span class="card__label">Confidential Computing on GPU</span>
+            <h3>Your edge, <span class="hl">sealed in silicon.</span></h3>
+            <p>Your data and models stay encrypted at rest, in transit and while running on the GPU, in hardware-isolated environments. Not other tenants. Not us.</p>
+            <ul class="points points--2">
+              <li><strong>Encrypted in use.</strong> Protected while computing.</li>
+              <li><strong>Hardware isolation.</strong> Secure enclaves on the GPU.</li>
+              <li><strong>Verifiable.</strong> Proof of where your code runs.</li>
+              <li><strong>Zero exposure.</strong> Invisible, even to us.</li>
+            </ul>
+          </div>
+          <div class="card__art"><img src="img/secure.webp?v=973bf982" alt="" width="1200" height="600" loading="lazy" decoding="async" /></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Why Joseki · word-led fact boxes -->
+    <section class="section wrap" id="difference">
+      <div class="head">
+        <h2>Others approximate the market. <span class="hl">We replicate it.</span></h2>
+        <p>Speed means nothing if the answer is wrong. Most research tools trade accuracy for convenience, and the gap shows up the day real money goes live. Joseki refuses that trade-off: true-to-life simulation, at GPU scale, in seconds.</p>
+      </div>
+      <dl class="facts">
+        <div class="fact"><dt>Fidelity</dt><dd>True-to-life market simulation</dd></div>
+        <div class="fact"><dt>Velocity</dt><dd>Answers in seconds on GPU clusters</dd></div>
+        <div class="fact"><dt>Scale</dt><dd>Thousands of scenarios in parallel</dd></div>
+        <div class="fact"><dt>Privacy</dt><dd>Encrypted end to end, even in use</dd></div>
+      </dl>
+    </section>
+
+    <!-- Bring your own · three entry cards -->
+    <section class="section wrap" id="byo">
+      <div class="head">
+        <h2>Your data. Your models. <span class="hl">Our horsepower.</span></h2>
+        <p>Plug in at any stage. Joseki powers the rest.</p>
+      </div>
+      <div class="entries">
+        <div class="entry">
+          <span class="entry__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3"/></svg>
+          </span>
+          <h3>Your data, or ours</h3>
+          <p>Connect your proprietary datasets, or tap into ours from day one.</p>
+        </div>
+        <div class="entry">
+          <span class="entry__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="6" cy="7" r="2.5"/><circle cx="18" cy="7" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8.5 7h7M7.2 9.2l3.6 6.6M16.8 9.2l-3.6 6.6"/></svg>
+          </span>
+          <h3>Your models, or ours</h3>
+          <p>Bring the strategies and models you already trust, or build new ones from scratch with our SDK.</p>
+        </div>
+        <div class="entry entry--warm">
+          <span class="entry__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 9.5-4-1.2-7-5-7-9.5V6z"/><path d="M9 12l2 2 4-4"/></svg>
+          </span>
+          <h3>Private, always</h3>
+          <p>Whatever you bring runs at full GPU scale, sealed by confidential computing.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA · Go-board card -->
+    <section class="section wrap" id="access">
+      <div class="cta">
+        <div class="cta__text">
+          <h2>Find your <span class="hl">joseki.</span></h2>
+          <p>In the game of Go, a joseki is a proven sequence of moves. We're opening early access to a select group of trading teams ready to find theirs.</p>
+          <div class="hero__actions">
+            <a class="btn" href="mailto:hi@joseki.ai?subject=Joseki%20early%20access">Request early access <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <div class="cta__art"><img src="img/goban.webp?v=423a199f" alt="" width="760" height="640" loading="lazy" decoding="async" /></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__row">
+      <a class="brand brand--foot" href="#top" aria-label="Joseki home">
+        <img class="brand__logo" src="img/logo.svg?v=16c0c2ed" alt="Joseki" width="57" height="22" />
+      </a>
+      <div class="foot__meta">
+        <a href="mailto:hi@joseki.ai">hi@joseki.ai</a>
+        <span>© 2026 Joseki</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js" defer></script>
+  <script src="js/hero-bg.js" defer></script>
+</body>
 </html>

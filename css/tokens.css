@@ -38,6 +38,10 @@
   --color-ok:       oklch(58% 0.14 155);
   --color-warn:     oklch(70% 0.16 70);
   --color-err:      oklch(58% 0.19 25);
+  --color-ok-2:     oklch(44% 0.12 155);
+  --color-ok-ghost: oklch(96% 0.03 155);
+  --color-warn-2:   oklch(48% 0.12 70);
+  --color-warn-ghost: oklch(96.5% 0.04 85);
 
   /* fonts — preserved from the previous build */
   --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- Joseki marketing owns this static page: what Joseki is and how it is built. Names no individual. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noarchive" />
+  <title>About — Joseki</title>
+  <meta name="description" content="Joseki builds infrastructure for quantitative trading research: market data, feature engineering, simulation, machine learning and workflow tooling, developed first for our own strategies." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="icon" href="/img/favicon-32.png?v=bb30afc0" sizes="32x32" type="image/png" />
+  <link rel="icon" href="/img/favicon.svg?v=612ca15e" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png?v=7920d79d" />
+</head>
+<body>
+  <header class="nav" id="nav" data-scrolled="false">
+    <div class="wrap nav__row">
+      <a class="brand" href="/" aria-label="Joseki home">
+        <img class="brand__logo" src="/img/logo.svg?v=16c0c2ed" alt="Joseki" width="67" height="26" />
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav__links" id="primaryLinks">
+          <li class="nav__group" id="productsGroup">
+            <button class="nav__menubtn" type="button" id="productsButton" aria-expanded="false" aria-controls="productsMenu">Products <svg class="nav__chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3"/></svg></button>
+            <div class="nav__panel" id="productsMenu">
+              <div class="nav__groups">
+              <div class="nav__grp">
+                <span class="nav__grphead">Data</span>
+                <ul class="nav__sub">
+                  <li><a href="/products/market-data/"><strong>Market Data</strong><span>Colocated capture, nanosecond timestamps, full history, integrated</span></a></li>
+                </ul>
+              </div>
+              <div class="nav__grp nav__grp--engine">
+                <span class="nav__grphead">Quant engine <span class="grptag">Innovations</span></span>
+                <ul class="nav__sub">
+                  <li><a href="/products/feature-engineering/"><strong>Feature Engineering</strong><span>Feature library, option analytics, learned features</span></a></li>
+                  <li><a href="/products/simulation/"><strong>Simulation &amp; Backtesting</strong><span>Event-driven and order book simulation on CPU and GPU</span></a></li>
+                  <li><a href="/products/machine-learning/"><strong>Machine Learning &amp; RL</strong><span>Managed training, search and RL environments</span></a></li>
+                  <li><a href="/products/workflow/"><strong>Workflow</strong><span>Strategy pipelines as typed, versioned graphs</span></a></li>
+                </ul>
+              </div>
+              </div>
+              <a class="nav__all" href="/products/">All products <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </li>
+          <li><a href="/innovations/">Innovations</a></li>
+          <li><a href="/use-cases/">Use cases</a></li>
+          <li><a href="/about/" aria-current="page">About</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="nav__cta">
+        <a class="btn btn--sm" href="/access/">Request access <span class="arrow" aria-hidden="true">→</span></a>
+        <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primaryLinks" id="navToggle">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="page-head">
+      <div class="wrap">
+        <span class="eyebrow">About</span>
+        <h1>About Joseki</h1>
+        <p class="lede">Joseki builds infrastructure for quantitative trading research: market data, feature engineering, simulation, machine learning and workflow tooling.</p>
+      </div>
+    </section>
+
+    <section class="section wrap">
+      <article class="prose">
+        <h2>Origin</h2>
+        <p>Joseki began as the research and trading infrastructure built for our own strategies. The components were generalized into products for teams that build the same pipeline: data capture, feature computation, a realistic simulator and machine-learning infrastructure.</p>
+
+
+        <h2>Team</h2>
+        <p>Joseki is built by a small team, each member an expert in their own area, who care about the work and improve the platform continuously.</p>
+
+        <h2>Contact</h2>
+        <p><a href="mailto:hi@joseki.ai">hi@joseki.ai</a> · <a href="/access/">Request early access →</a></p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__row">
+      <a class="brand brand--foot" href="/" aria-label="Joseki home">
+        <img class="brand__logo" src="/img/logo.svg?v=16c0c2ed" alt="Joseki" width="57" height="22" />
+      </a>
+      <nav aria-label="Footer">
+        <ul class="foot__links">
+          <li><a href="/products/">Products</a></li>
+          <li><a href="/innovations/">Innovations</a></li>
+          <li><a href="/use-cases/">Use cases</a></li>
+          <li><a href="/about/" aria-current="page">About</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="foot__meta">
+        <a href="mailto:hi@joseki.ai">hi@joseki.ai</a>
+        <span>© 2026 Joseki</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/app.js" defer></script>
+</body>
+</html>

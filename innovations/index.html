@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!-- Joseki marketing owns this static page: the innovations under the products. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noarchive" />
+  <title>Innovations — Joseki</title>
+  <meta name="description" content="Computation at GPU scale for simulation, feature computation, training and search; GPU-native order book simulation in CUDA; multi-GPU training and search; and confidential computing." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="icon" href="/img/favicon-32.png?v=bb30afc0" sizes="32x32" type="image/png" />
+  <link rel="icon" href="/img/favicon.svg?v=612ca15e" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png?v=7920d79d" />
+</head>
+<body>
+  <header class="nav" id="nav" data-scrolled="false">
+    <div class="wrap nav__row">
+      <a class="brand" href="/" aria-label="Joseki home">
+        <img class="brand__logo" src="/img/logo.svg?v=16c0c2ed" alt="Joseki" width="67" height="26" />
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav__links" id="primaryLinks">
+          <li class="nav__group" id="productsGroup">
+            <button class="nav__menubtn" type="button" id="productsButton" aria-expanded="false" aria-controls="productsMenu">Products <svg class="nav__chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3"/></svg></button>
+            <div class="nav__panel" id="productsMenu">
+              <div class="nav__groups">
+              <div class="nav__grp">
+                <span class="nav__grphead">Data</span>
+                <ul class="nav__sub">
+                  <li><a href="/products/market-data/"><strong>Market Data</strong><span>Colocated capture, nanosecond timestamps, full history, integrated</span></a></li>
+                </ul>
+              </div>
+              <div class="nav__grp nav__grp--engine">
+                <span class="nav__grphead">Quant engine <span class="grptag">Innovations</span></span>
+                <ul class="nav__sub">
+                  <li><a href="/products/feature-engineering/"><strong>Feature Engineering</strong><span>Feature library, option analytics, learned features</span></a></li>
+                  <li><a href="/products/simulation/"><strong>Simulation &amp; Backtesting</strong><span>Event-driven and order book simulation on CPU and GPU</span></a></li>
+                  <li><a href="/products/machine-learning/"><strong>Machine Learning &amp; RL</strong><span>Managed training, search and RL environments</span></a></li>
+                  <li><a href="/products/workflow/"><strong>Workflow</strong><span>Strategy pipelines as typed, versioned graphs</span></a></li>
+                </ul>
+              </div>
+              </div>
+              <a class="nav__all" href="/products/">All products <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </li>
+          <li><a href="/innovations/" aria-current="page">Innovations</a></li>
+          <li><a href="/use-cases/">Use cases</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="nav__cta">
+        <a class="btn btn--sm" href="/access/">Request access <span class="arrow" aria-hidden="true">→</span></a>
+        <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primaryLinks" id="navToggle">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="page-head">
+      <div class="wrap">
+        <span class="eyebrow">Innovations</span>
+        <h1>Innovations</h1>
+        <p class="lede">What sets the platform apart: computation at GPU scale, from order book simulation to model training and search, and confidential computing for customer code and data.</p>
+      </div>
+    </section>
+
+    <section class="section wrap">
+      <div class="blocks">
+        <div class="block" id="gpu-scale">
+          <div class="block__head">
+            <span class="card__label">Core</span>
+            <h2>Computation at GPU scale</h2>
+            <p>Simulation, feature computation, training and search run on GPUs rather than on CPU cores. A GPU executes tens of thousands of threads over high-bandwidth memory, so independent work, such as parameter sets, markets, instruments and environments, runs concurrently instead of in sequence, and its Tensor Cores execute the matrix arithmetic of modern models in mixed precision. For a research team the effect is iteration speed: more hypotheses tested and stress-tested per day, on capacity that grows with the GPUs rather than with a cluster to administer.</p>
+          </div>
+          <div class="block__body">
+            <ul class="points">
+              <li><strong>Throughput over clock speed.</strong> A CPU core is fast at one task; a GPU is fast at thousands of the same task. Parameter sweeps, scenario sets, feature computation across instruments and reinforcement-learning environments are that kind of work.</li>
+              <li><strong>Tensor Cores for modern models.</strong> Transformers, state-space models and large recurrent networks are dominated by matrix multiply-accumulate, which Tensor Cores execute in mixed precision (TF32, BF16, FP8) at a throughput CPUs do not approach.</li>
+              <li><strong>No host round trips.</strong> Order book replay, model state and environment steps stay on the card in high-bandwidth memory; nothing is copied back to the host per event.</li>
+              <li><strong>Scale without rewriting.</strong> The same code runs on one GPU or across many with data parallelism, and is certified against a CPU reference engine.</li>
+            </ul>
+            <ul class="tags tags--accent"><li>CUDA</li><li>Tensor Cores</li><li>mixed precision · TF32 · BF16 · FP8</li><li>high-bandwidth memory</li><li>NVLink</li><li>vectorized environments</li><li>data parallelism</li><li>kernel fusion</li></ul>
+          </div>
+        </div>
+
+        <div class="block" id="gpu">
+          <div class="block__head">
+            <span class="card__label">Simulation</span>
+            <h2>GPU-native simulation</h2>
+            <p>Order book replay, matching, fills and accounting run as CUDA kernels, with many independent simulations per GPU. A CPU reference engine certifies that both engines produce the same sequence of events.</p>
+          </div>
+          <div class="block__body">
+            <figure class="art-figure"><img src="/img/gpu.webp?v=807cf720" alt="" width="1200" height="600" loading="lazy" decoding="async" /></figure>
+            <ul class="tags tags--accent"><li>CUDA C++</li><li>CUB</li><li>Thrust</li><li>cuRAND</li></ul>
+          </div>
+        </div>
+
+        <div class="block" id="ml">
+          <div class="block__head">
+            <span class="card__label">Machine learning</span>
+            <h2>Multi-GPU training and search</h2>
+            <p>Training and search use compiled model graphs, vectorized environments and multi-GPU data parallelism.</p>
+          </div>
+          <div class="block__body">
+            <ul class="tags tags--accent"><li>JAX · XLA</li><li>PyTorch</li><li>cuDNN</li><li>cuBLAS</li><li>NCCL</li><li>RAPIDS cuDF</li><li>vectorized environments</li><li>population-based training</li><li>TensorRT inference</li></ul>
+          </div>
+        </div>
+
+        <div class="block" id="confidential">
+          <div class="block__head">
+            <span class="card__label">Privacy</span>
+            <h2>Confidential computing</h2>
+            <p>Customer code and data run on confidential GPUs inside a hardware-isolated enclave: CPU memory encrypted by the processor, GPU memory in a protected region, and encrypted transfers between them. Keys are released only after remote attestation of the enclave. Nobody outside it can read the code or the data: not other tenants, not Joseki staff, not the root user of the host.</p>
+          </div>
+          <div class="block__body">
+            <figure class="art-figure"><img src="/img/secure.webp?v=973bf982" alt="" width="1200" height="600" loading="lazy" decoding="async" /></figure>
+            <ul class="tags tags--accent"><li>NVIDIA Confidential Computing</li><li>AMD SEV-SNP</li><li>Intel TDX</li><li>remote attestation</li><li>encrypted CPU–GPU transfers</li><li>customer-held keys</li></ul>
+          </div>
+        </div>
+
+        <div class="block" id="engineering">
+          <div class="block__head">
+            <span class="card__label">Engineering</span>
+            <h2>Reproducible builds and runs</h2>
+            <p>Hermetic builds from pinned toolchains, versioned datasets and recorded configurations. Simulation is deterministic; training runs record seed, code and environment.</p>
+          </div>
+          <div class="block__body">
+            <ul class="tags"><li>Rust</li><li>CUDA C++</li><li>hermetic builds</li><li>pinned toolchains</li><li>versioned datasets</li><li>deterministic simulation</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="access">
+      <div class="cta">
+        <div class="cta__text">
+          <h2>Get early access</h2>
+          <p>Joseki is onboarding a small number of pilot teams. Technical questions about the stack are answered by the engineering team.</p>
+          <div class="hero__actions">
+            <a class="btn" href="/access/">Request early access <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <div class="cta__art"><img src="/img/goban.webp?v=423a199f" alt="" width="760" height="640" loading="lazy" decoding="async" /></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__row">
+      <a class="brand brand--foot" href="/" aria-label="Joseki home">
+        <img class="brand__logo" src="/img/logo.svg?v=16c0c2ed" alt="Joseki" width="57" height="22" />
+      </a>
+      <nav aria-label="Footer">
+        <ul class="foot__links">
+          <li><a href="/products/">Products</a></li>
+          <li><a href="/innovations/" aria-current="page">Innovations</a></li>
+          <li><a href="/use-cases/">Use cases</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="foot__meta">
+        <a href="mailto:hi@joseki.ai">hi@joseki.ai</a>
+        <span>© 2026 Joseki</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/app.js" defer></script>
+</body>
+</html>

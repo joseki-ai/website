@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<!-- Joseki marketing owns this static page: the Feature Engineering product. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noarchive" />
+  <title>Feature Engineering — Joseki</title>
+  <meta name="description" content="A library of market features and option analytics, user-defined features and learned features, computed point-in-time on captured market data and shared between research, backtesting and live use." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="icon" href="/img/favicon-32.png?v=bb30afc0" sizes="32x32" type="image/png" />
+  <link rel="icon" href="/img/favicon.svg?v=612ca15e" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png?v=7920d79d" />
+</head>
+<body>
+  <header class="nav" id="nav" data-scrolled="false">
+    <div class="wrap nav__row">
+      <a class="brand" href="/" aria-label="Joseki home">
+        <img class="brand__logo" src="/img/logo.svg?v=16c0c2ed" alt="Joseki" width="67" height="26" />
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav__links" id="primaryLinks">
+          <li class="nav__group" id="productsGroup">
+            <button class="nav__menubtn" type="button" id="productsButton" aria-expanded="false" aria-controls="productsMenu" aria-current="true">Products <svg class="nav__chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3"/></svg></button>
+            <div class="nav__panel" id="productsMenu">
+              <div class="nav__groups">
+              <div class="nav__grp">
+                <span class="nav__grphead">Data</span>
+                <ul class="nav__sub">
+                  <li><a href="/products/market-data/"><strong>Market Data</strong><span>Colocated capture, nanosecond timestamps, full history, integrated</span></a></li>
+                </ul>
+              </div>
+              <div class="nav__grp nav__grp--engine">
+                <span class="nav__grphead">Quant engine <span class="grptag">Innovations</span></span>
+                <ul class="nav__sub">
+                  <li><a href="/products/feature-engineering/" aria-current="page"><strong>Feature Engineering</strong><span>Feature library, option analytics, learned features</span></a></li>
+                  <li><a href="/products/simulation/"><strong>Simulation &amp; Backtesting</strong><span>Event-driven and order book simulation on CPU and GPU</span></a></li>
+                  <li><a href="/products/machine-learning/"><strong>Machine Learning &amp; RL</strong><span>Managed training, search and RL environments</span></a></li>
+                  <li><a href="/products/workflow/"><strong>Workflow</strong><span>Strategy pipelines as typed, versioned graphs</span></a></li>
+                </ul>
+              </div>
+              </div>
+              <a class="nav__all" href="/products/">All products <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </li>
+          <li><a href="/innovations/">Innovations</a></li>
+          <li><a href="/use-cases/">Use cases</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="nav__cta">
+        <a class="btn btn--sm" href="/access/">Request access <span class="arrow" aria-hidden="true">→</span></a>
+        <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primaryLinks" id="navToggle">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="page-head">
+      <div class="wrap">
+        <span class="eyebrow">Products · Feature Engineering</span>
+        <h1>Feature engineering</h1>
+        <p class="lede">A library of market features and option analytics, user-defined features and learned features, computed point-in-time on captured market data and shared between research, backtesting and live use.</p>
+        <div class="hero__actions">
+          <a class="btn" href="/access/">Request early access <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap">
+      <div class="blocks">
+        <div class="block" id="library">
+          <div class="block__head">
+            <span class="card__label">Library</span>
+            <h2>Feature library</h2>
+            <p>Standard features computed from trades, quotes and order book data at any sampling clock.</p>
+          </div>
+          <div class="block__body">
+            <div class="tiles">
+              <div class="tile"><span class="tile__code">returns</span><h3>Returns and momentum</h3><p>Log returns, momentum and mean-reversion statistics over configurable horizons.</p></div>
+              <div class="tile"><span class="tile__code">volatility</span><h3>Volatility</h3><p>Realized, Parkinson, Garman–Klass and EWMA estimators, with intraday seasonality.</p></div>
+              <div class="tile"><span class="tile__code">microstructure</span><h3>Microstructure</h3><p>Order flow imbalance, microprice, quoted and effective spread, depth and queue imbalance.</p></div>
+              <div class="tile"><span class="tile__code">volume</span><h3>Volume</h3><p>VWAP deviation, volume profile, trade intensity and participation rate.</p></div>
+              <div class="tile"><span class="tile__code">cross-sectional</span><h3>Cross-sectional</h3><p>Rolling beta, correlation, lead–lag, spreads and ratios between instruments.</p></div>
+              <div class="tile"><span class="tile__code">calendar</span><h3>Calendar</h3><p>Session phase, time to expiration and scheduled event windows.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="block" id="options">
+          <div class="block__head">
+            <span class="card__label">Options</span>
+            <h2>Option analytics</h2>
+            <p>Implied volatility solved per quote, volatility surfaces fitted per snapshot under butterfly and calendar no-arbitrage constraints, and Greeks to third order for vanilla and digital options.</p>
+          </div>
+          <div class="block__body">
+            <ul class="tags tags--accent"><li>delta</li><li>gamma</li><li>vega</li><li>theta</li><li>rho</li><li>vanna</li><li>volga</li><li>charm</li><li>speed</li><li>color</li></ul>
+            <ul class="tags"><li>implied volatility per quote</li><li>SVI surface fits</li><li>skew and term structure</li><li>digital-option Greeks</li></ul>
+          </div>
+        </div>
+
+        <div class="block" id="custom">
+          <div class="block__head">
+            <span class="card__label">Custom</span>
+            <h2>User-defined features</h2>
+            <p>Features are defined as expressions or code against the same inputs as the library. Sampling clock, window and normalization are parameters of the definition, so one definition produces the same values in research, backtests and live use.</p>
+          </div>
+          <div class="block__body">
+            <ul class="tags"><li>time, tick, volume and dollar bars</li><li>rolling and expanding windows</li><li>z-score</li><li>rank transform</li><li>winsorization</li><li>sector and beta neutralization</li><li>EWMA smoothing</li></ul>
+          </div>
+        </div>
+
+        <div class="block" id="learned">
+          <div class="block__head">
+            <span class="card__label">Learned</span>
+            <h2>Learned features</h2>
+            <p>Sequence encoders trained on raw or engineered inputs produce embeddings that are used as features alongside the library.</p>
+          </div>
+          <div class="block__body">
+            <figure class="art-figure"><img src="/img/features.webp?v=06950886" alt="" width="1200" height="600" loading="lazy" decoding="async" /></figure>
+            <ul class="tags"><li>temporal convolutions</li><li>recurrent networks</li><li>attention</li><li>state-space models</li><li>autoencoders</li><li>self-supervised pretraining</li></ul>
+          </div>
+        </div>
+
+        <div class="block" id="analysis">
+          <div class="block__head">
+            <span class="card__label">Analysis</span>
+            <h2>Feature analysis</h2>
+            <p>Predictive power, decay, stability and redundancy are measured before a feature is used in a strategy.</p>
+          </div>
+          <div class="block__body">
+            <ul class="tags tags--accent"><li>information coefficient</li><li>IC decay by horizon</li><li>permutation importance</li><li>SHAP values</li><li>regime stability</li><li>correlation clustering</li><li>leakage tests</li></ul>
+          </div>
+        </div>
+
+        <div class="block" id="point-in-time">
+          <div class="block__head">
+            <span class="card__label">Correctness</span>
+            <h2>Point-in-time computation</h2>
+            <p>Inputs are presented in the order they would have reached the strategy: receive time plus the configured transport latency. A feature whose window is incomplete is marked invalid rather than forward-filled.</p>
+          </div>
+          <div class="block__body">
+            <ul class="points">
+              <li><strong>No look-ahead.</strong> No feature reads data after its own timestamp.</li>
+              <li><strong>No training-serving skew.</strong> One implementation for research, backtests and the live stack.</li>
+              <li><strong>Pinned definitions.</strong> Each backtest records the feature definition versions it used.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="access">
+      <div class="cta">
+        <div class="cta__text">
+          <h2>Get early access</h2>
+          <p>Joseki is onboarding a small number of pilot teams. Tell us which features, markets and sampling clocks you need.</p>
+          <div class="hero__actions">
+            <a class="btn" href="/access/">Request early access <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="btn btn--ghost" href="/products/simulation/">Next: Simulation &amp; Backtesting</a>
+          </div>
+        </div>
+        <div class="cta__art"><img src="/img/goban.webp?v=423a199f" alt="" width="760" height="640" loading="lazy" decoding="async" /></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__row">
+      <a class="brand brand--foot" href="/" aria-label="Joseki home">
+        <img class="brand__logo" src="/img/logo.svg?v=16c0c2ed" alt="Joseki" width="57" height="22" />
+      </a>
+      <nav aria-label="Footer">
+        <ul class="foot__links">
+          <li><a href="/products/">Products</a></li>
+          <li><a href="/innovations/">Innovations</a></li>
+          <li><a href="/use-cases/">Use cases</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="foot__meta">
+        <a href="mailto:hi@joseki.ai">hi@joseki.ai</a>
+        <span>© 2026 Joseki</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/app.js" defer></script>
+</body>
+</html>

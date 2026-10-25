@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<!-- Joseki marketing owns this static page: the products overview. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noarchive" />
+  <title>Products — Joseki</title>
+  <meta name="description" content="Market data captured in colocation, feature engineering, event-driven simulation, managed machine learning and workflow tooling for quantitative trading research, available separately or as one platform." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="icon" href="/img/favicon-32.png?v=bb30afc0" sizes="32x32" type="image/png" />
+  <link rel="icon" href="/img/favicon.svg?v=612ca15e" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png?v=7920d79d" />
+</head>
+<body>
+  <header class="nav" id="nav" data-scrolled="false">
+    <div class="wrap nav__row">
+      <a class="brand" href="/" aria-label="Joseki home">
+        <img class="brand__logo" src="/img/logo.svg?v=16c0c2ed" alt="Joseki" width="67" height="26" />
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav__links" id="primaryLinks">
+          <li class="nav__group" id="productsGroup">
+            <button class="nav__menubtn" type="button" id="productsButton" aria-expanded="false" aria-controls="productsMenu" aria-current="true">Products <svg class="nav__chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3"/></svg></button>
+            <div class="nav__panel" id="productsMenu">
+              <div class="nav__groups">
+              <div class="nav__grp">
+                <span class="nav__grphead">Data</span>
+                <ul class="nav__sub">
+                  <li><a href="/products/market-data/"><strong>Market Data</strong><span>Colocated capture, nanosecond timestamps, full history, integrated</span></a></li>
+                </ul>
+              </div>
+              <div class="nav__grp nav__grp--engine">
+                <span class="nav__grphead">Quant engine <span class="grptag">Innovations</span></span>
+                <ul class="nav__sub">
+                  <li><a href="/products/feature-engineering/"><strong>Feature Engineering</strong><span>Feature library, option analytics, learned features</span></a></li>
+                  <li><a href="/products/simulation/"><strong>Simulation &amp; Backtesting</strong><span>Event-driven and order book simulation on CPU and GPU</span></a></li>
+                  <li><a href="/products/machine-learning/"><strong>Machine Learning &amp; RL</strong><span>Managed training, search and RL environments</span></a></li>
+                  <li><a href="/products/workflow/"><strong>Workflow</strong><span>Strategy pipelines as typed, versioned graphs</span></a></li>
+                </ul>
+              </div>
+              </div>
+              <a class="nav__all" href="/products/" aria-current="page">All products <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </li>
+          <li><a href="/innovations/">Innovations</a></li>
+          <li><a href="/use-cases/">Use cases</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="nav__cta">
+        <a class="btn btn--sm" href="/access/">Request access <span class="arrow" aria-hidden="true">→</span></a>
+        <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primaryLinks" id="navToggle">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="page-head">
+      <div class="wrap">
+        <span class="eyebrow">Products</span>
+        <h1>Infrastructure for quantitative trading research</h1>
+        <p class="lede">Market data captured in colocation, a feature library, an event-driven simulator, managed machine learning and a workflow canvas, built on shared record formats and conventions. Each product is available on its own or as part of one platform.</p>
+        <div class="hero__actions">
+          <a class="btn" href="/access/">Request early access <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap">
+      <div class="stories">
+        <h2 class="grid-head">Data</h2>
+        <article class="story story--wide">
+          <span class="tile__code">market data</span>
+          <h3>Market Data</h3>
+          <p>Raw and full-depth market data with nanosecond timestamps, retained in full history and read in place by every product.</p>
+          <p class="story__links"><a class="textlink" href="/products/market-data/">Market Data →</a></p>
+        </article>
+
+        <h2 class="grid-head grid-head--accent">Quant engine <span class="grptag">Innovations</span></h2>
+        <article class="story story--engine">
+          <span class="tile__code">features</span>
+          <h3>Feature Engineering</h3>
+          <p>A feature library, option analytics, user-defined features and learned features, computed point-in-time.</p>
+          <p class="story__links"><a class="textlink" href="/products/feature-engineering/">Feature Engineering →</a></p>
+        </article>
+        <article class="story story--engine">
+          <span class="tile__code">simulation</span>
+          <h3>Simulation &amp; Backtesting</h3>
+          <p>Event-driven and order-book simulation on CPU and GPU, with configurable fill, latency and transaction cost models.</p>
+          <p class="story__links"><a class="textlink" href="/products/simulation/">Simulation &amp; Backtesting →</a></p>
+        </article>
+        <article class="story story--engine">
+          <span class="tile__code">ml · rl</span>
+          <h3>Machine Learning &amp; RL</h3>
+          <p>Managed training, hyperparameter search and reinforcement-learning environments built on the simulator.</p>
+          <p class="story__links"><a class="textlink" href="/products/machine-learning/">Machine Learning &amp; RL →</a></p>
+        </article>
+        <article class="story story--engine">
+          <span class="tile__code">workflow</span>
+          <h3>Workflow</h3>
+          <p>Strategy pipelines defined as typed, versioned graphs and run as backtests, parameter sweeps or scenario sets.</p>
+          <p class="story__links"><a class="textlink" href="/products/workflow/">Workflow →</a></p>
+        </article>
+
+        <h2 class="grid-head">Developers</h2>
+        <article class="story story--wide" id="sdk">
+          <span class="tile__code">sdk</span>
+          <h3>SDK</h3>
+          <p>Python and Rust SDKs expose the interfaces used by the built-in components. Custom data access, features, market models, strategies, environments and workflow blocks use the same interfaces and point-in-time rules as the built-in components.</p>
+          <div class="tiles">
+            <div class="tile"><span class="tile__code">data</span><h3>Data access</h3><p>Any venue, record type, symbol set and time range.</p></div>
+            <div class="tile"><span class="tile__code">features</span><h3>Features</h3><p>User-defined features and learned features.</p></div>
+            <div class="tile"><span class="tile__code">market</span><h3>Market models</h3><p>Fill, latency, cost and impact models.</p></div>
+            <div class="tile"><span class="tile__code">strategy</span><h3>Strategies</h3><p>Rules, models and execution logic.</p></div>
+            <div class="tile"><span class="tile__code">rl</span><h3>Environments</h3><p>Custom rewards and observation spaces.</p></div>
+            <div class="tile"><span class="tile__code">workflow</span><h3>Blocks</h3><p>Any of the above as a workflow block.</p></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section--tight wrap">
+      <div class="blocks">
+        <div class="block" id="platform">
+          <div class="block__head">
+            <span class="card__label">Platform</span>
+            <h2>Shared conventions across products</h2>
+            <p>All products use the same record formats, symbology, timestamps and dataset versions.</p>
+          </div>
+          <div class="block__body">
+            <ul class="points">
+              <li><strong>One definition.</strong> A feature computed in research is the same feature in a backtest and in live use.</li>
+              <li><strong>Point-in-time data.</strong> Reference data, features and simulations use information as it was available at the time.</li>
+              <li><strong>Reproducible runs.</strong> Each run records the dataset versions, configuration and build it used.</li>
+              <li><strong>GPU scale.</strong> Simulation, feature computation, training and search run on GPUs, so independent work runs concurrently and the same code scales from one GPU to many.</li>
+            </ul>
+            <ul class="tags"><li>one record format across venues</li><li>nanosecond timestamps</li><li>versioned datasets</li><li>point-in-time reference data</li><li>GPU acceleration</li><li>confidential computing</li></ul>
+            <p class="lede-note">Joseki is in early access. Products are released to pilot teams in stages.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="access">
+      <div class="cta">
+        <div class="cta__text">
+          <h2>Get early access</h2>
+          <p>Joseki is onboarding a small number of pilot teams. Tell us which venues, products and workloads you need.</p>
+          <div class="hero__actions">
+            <a class="btn" href="/access/">Request early access <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <div class="cta__art"><img src="/img/goban.webp?v=423a199f" alt="" width="760" height="640" loading="lazy" decoding="async" /></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__row">
+      <a class="brand brand--foot" href="/" aria-label="Joseki home">
+        <img class="brand__logo" src="/img/logo.svg?v=16c0c2ed" alt="Joseki" width="57" height="22" />
+      </a>
+      <nav aria-label="Footer">
+        <ul class="foot__links">
+          <li><a href="/products/" aria-current="page">Products</a></li>
+          <li><a href="/innovations/">Innovations</a></li>
+          <li><a href="/use-cases/">Use cases</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="foot__meta">
+        <a href="mailto:hi@joseki.ai">hi@joseki.ai</a>
+        <span>© 2026 Joseki</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/app.js" defer></script>
+</body>
+</html>

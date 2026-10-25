@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!-- Joseki marketing owns this static page: the Market Data product. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noarchive" />
+  <title>Market Data — Joseki</title>
+  <meta name="description" content="Raw and full-depth market data captured in colocation with nanosecond hardware timestamps, retained in full history and read in place by strategies, features, simulations and models. Nothing to download, no storage to manage." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="icon" href="/img/favicon-32.png?v=bb30afc0" sizes="32x32" type="image/png" />
+  <link rel="icon" href="/img/favicon.svg?v=612ca15e" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png?v=7920d79d" />
+</head>
+<body>
+  <header class="nav" id="nav" data-scrolled="false">
+    <div class="wrap nav__row">
+      <a class="brand" href="/" aria-label="Joseki home">
+        <img class="brand__logo" src="/img/logo.svg?v=16c0c2ed" alt="Joseki" width="67" height="26" />
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav__links" id="primaryLinks">
+          <li class="nav__group" id="productsGroup">
+            <button class="nav__menubtn" type="button" id="productsButton" aria-expanded="false" aria-controls="productsMenu" aria-current="true">Products <svg class="nav__chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3"/></svg></button>
+            <div class="nav__panel" id="productsMenu">
+              <div class="nav__groups">
+              <div class="nav__grp">
+                <span class="nav__grphead">Data</span>
+                <ul class="nav__sub">
+                  <li><a href="/products/market-data/" aria-current="page"><strong>Market Data</strong><span>Colocated capture, nanosecond timestamps, full history, integrated</span></a></li>
+                </ul>
+              </div>
+              <div class="nav__grp nav__grp--engine">
+                <span class="nav__grphead">Quant engine <span class="grptag">Innovations</span></span>
+                <ul class="nav__sub">
+                  <li><a href="/products/feature-engineering/"><strong>Feature Engineering</strong><span>Feature library, option analytics, learned features</span></a></li>
+                  <li><a href="/products/simulation/"><strong>Simulation &amp; Backtesting</strong><span>Event-driven and order book simulation on CPU and GPU</span></a></li>
+                  <li><a href="/products/machine-learning/"><strong>Machine Learning &amp; RL</strong><span>Managed training, search and RL environments</span></a></li>
+                  <li><a href="/products/workflow/"><strong>Workflow</strong><span>Strategy pipelines as typed, versioned graphs</span></a></li>
+                </ul>
+              </div>
+              </div>
+              <a class="nav__all" href="/products/">All products <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </li>
+          <li><a href="/innovations/">Innovations</a></li>
+          <li><a href="/use-cases/">Use cases</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="nav__cta">
+        <a class="btn btn--sm" href="/access/">Request access <span class="arrow" aria-hidden="true">→</span></a>
+        <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primaryLinks" id="navToggle">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="page-head">
+      <div class="wrap">
+        <span class="eyebrow">Products · Market Data</span>
+        <h1>Integrated market data</h1>
+        <p class="lede">Raw and full-depth market data with nanosecond hardware timestamps, retained in full history and read in place by strategies, features, simulations and models. Nothing to download, no storage to manage.</p>
+        <div class="hero__actions">
+          <a class="btn" href="/access/">Request early access <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn--ghost" href="#data">What is captured</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap">
+      <div class="blocks">
+        <div class="block" id="capture">
+          <div class="block__head">
+            <span class="card__label">Capture</span>
+            <h2>Colocated capture with nanosecond timestamps</h2>
+            <p>Feeds are captured in colocation facilities from direct exchange feeds, on FPGA and hardware-timestamping network adapters with kernel bypass, synchronized against a GPS clock source over PTP. Every record carries the matching engine timestamp and the receive timestamp, with sequence numbers preserved.</p>
+          </div>
+          <div class="block__body">
+            <ul class="points">
+              <li><strong>Event timestamp.</strong> The time the event was received by the matching engine, at the venue's own resolution.</li>
+              <li><strong>Receive timestamp.</strong> Taken in hardware at capture: nanosecond resolution, sub-microsecond accuracy to UTC, monotonic for each instrument.</li>
+              <li><strong>Raw messages retained.</strong> Every message in the venue's native protocol, lossless, alongside the decoded books.</li>
+            </ul>
+            <ul class="tags tags--accent"><li>FPGA capture</li><li>hardware timestamping</li><li>PTP · IEEE 1588</li><li>GPS clock source</li><li>nanosecond resolution</li><li>kernel bypass</li><li>UTC, leap-second aware</li></ul>
+          </div>
+        </div>
+
+        <div class="block" id="data">
+          <div class="block__head">
+            <span class="card__label">Data</span>
+            <h2>Raw messages to daily bars</h2>
+            <p>Data is stored as captured. Order books, trades and bars are decoded from the raw messages. Normalization, resampling and alignment are optional transforms, applied at the feature stage when a model needs them.</p>
+          </div>
+          <div class="block__body">
+            <div class="tiles">
+              <div class="tile"><span class="tile__code">raw</span><h3>Raw messages</h3><p>Every message in the venue's native protocol, lossless, with hardware timestamps.</p></div>
+              <div class="tile"><span class="tile__code">mbo · L3</span><h3>Market by order</h3><p>Full order book data, including every order add, modify and cancel, where the venue publishes order-level data.</p></div>
+              <div class="tile"><span class="tile__code">mbp · L2 · L1</span><h3>Market by price</h3><p>Aggregated book depth with every trade and book update at the top price levels, or at the best bid and offer.</p></div>
+              <div class="tile"><span class="tile__code">trades</span><h3>Trades</h3><p>Every trade event, tick by tick, with aggressor side where the venue publishes it.</p></div>
+              <div class="tile"><span class="tile__code">ohlcv</span><h3>Bars</h3><p>Open, high, low, close and volume at second, minute, hour and daily intervals, built from trades.</p></div>
+              <div class="tile"><span class="tile__code">definition</span><h3>Instrument definitions</h3><p>Point-in-time properties: symbol, tick size, contract size, expiration, strike and settlement rule.</p></div>
+            </div>
+            <ul class="tags"><li>session status</li><li>daily statistics</li><li>auction imbalance</li><li>corporate actions</li><li>adjustment factors</li><li>security master</li></ul>
+          </div>
+        </div>
+
+        <div class="block" id="integration">
+          <div class="block__head">
+            <span class="card__label">Integration</span>
+            <h2>Read in place by strategies, simulations and models</h2>
+            <p>Strategies, feature computations, simulations and training jobs read the data where it is stored. There is no download, no copy to maintain and no storage to provision. History is retained and versioned on the platform.</p>
+          </div>
+          <div class="block__body">
+            <div class="tiles">
+              <div class="tile"><span class="tile__code">simulator</span><h3>In the simulator</h3><p>Any venue, symbol set and time range, replayed at full depth.</p></div>
+              <div class="tile"><span class="tile__code">features · models</span><h3>In features and models</h3><p>Feature computations and training datasets read the same records.</p></div>
+              <div class="tile"><span class="tile__code">sdk</span><h3>In analysis</h3><p>Programmatic access through the SDK in Python and Rust.</p></div>
+            </div>
+            <ul class="points">
+              <li><strong>Fast to load.</strong> Columnar storage indexed by instrument and time, located next to the simulators and GPUs, so a backtest starts without a data transfer.</li>
+              <li><strong>One copy.</strong> Every product reads the same dataset version, so results agree across research, backtests and models.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="block" id="history">
+          <div class="block__head">
+            <span class="card__label">History and coverage</span>
+            <h2>Long history across venues and asset classes</h2>
+            <p>Full-depth history is retained from the day a venue is added, with no roll-off. Equities, futures, options, FX and event contracts; each dataset lists its venues, record types and available date range.</p>
+          </div>
+          <div class="block__body">
+            <figure class="art-figure"><img src="/img/data.webp?v=cf436c7c" alt="" width="1200" height="600" loading="lazy" decoding="async" /></figure>
+          </div>
+        </div>
+
+        <div class="block" id="quality">
+          <div class="block__head">
+            <span class="card__label">Data quality</span>
+            <h2>Explicit quality flags and versioned datasets</h2>
+            <p>Records affected by an unrecoverable gap or an unreliable receive timestamp are flagged. Nothing is interpolated.</p>
+          </div>
+          <div class="block__body">
+            <ul class="points">
+              <li><strong>Gap flags.</strong> A flag on every record affected by a gap in the channel.</li>
+              <li><strong>Point-in-time reference data.</strong> Instrument definitions, symbology and corporate actions as of each date, with no look-ahead.</li>
+              <li><strong>Versioned datasets.</strong> A published dataset version is immutable; corrections are released as new versions.</li>
+            </ul>
+            <ul class="tags"><li>corporate actions</li><li>survivorship-bias-free universes</li><li>continuous futures and rolls</li><li>point-in-time symbology</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="access">
+      <div class="cta">
+        <div class="cta__text">
+          <h2>Get early access</h2>
+          <p>Joseki is onboarding a small number of pilot teams. Tell us which venues and date ranges you need.</p>
+          <div class="hero__actions">
+            <a class="btn" href="/access/">Request early access <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="btn btn--ghost" href="/products/feature-engineering/">Next: Feature Engineering</a>
+          </div>
+        </div>
+        <div class="cta__art"><img src="/img/goban.webp?v=423a199f" alt="" width="760" height="640" loading="lazy" decoding="async" /></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__row">
+      <a class="brand brand--foot" href="/" aria-label="Joseki home">
+        <img class="brand__logo" src="/img/logo.svg?v=16c0c2ed" alt="Joseki" width="57" height="22" />
+      </a>
+      <nav aria-label="Footer">
+        <ul class="foot__links">
+          <li><a href="/products/">Products</a></li>
+          <li><a href="/innovations/">Innovations</a></li>
+          <li><a href="/use-cases/">Use cases</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="foot__meta">
+        <a href="mailto:hi@joseki.ai">hi@joseki.ai</a>
+        <span>© 2026 Joseki</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/app.js" defer></script>
+</body>
+</html>

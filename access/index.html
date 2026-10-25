@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!-- Joseki marketing owns this static page. The form posts to the access Worker
+     (worker/) and falls back to an email in the visitor's mail app (js/access.js). -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noarchive" />
+  <title>Request early access — Joseki</title>
+  <meta name="description" content="Request early access to Joseki: market data, feature engineering, simulation and backtesting, machine learning and workflow tooling for quantitative trading research." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="icon" href="/img/favicon-32.png?v=bb30afc0" sizes="32x32" type="image/png" />
+  <link rel="icon" href="/img/favicon.svg?v=612ca15e" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png?v=7920d79d" />
+</head>
+<body>
+  <header class="nav" id="nav" data-scrolled="false">
+    <div class="wrap nav__row">
+      <a class="brand" href="/" aria-label="Joseki home">
+        <img class="brand__logo" src="/img/logo.svg?v=16c0c2ed" alt="Joseki" width="67" height="26" />
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav__links" id="primaryLinks">
+          <li class="nav__group" id="productsGroup">
+            <button class="nav__menubtn" type="button" id="productsButton" aria-expanded="false" aria-controls="productsMenu">Products <svg class="nav__chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3"/></svg></button>
+            <div class="nav__panel" id="productsMenu">
+              <div class="nav__groups">
+              <div class="nav__grp">
+                <span class="nav__grphead">Data</span>
+                <ul class="nav__sub">
+                  <li><a href="/products/market-data/"><strong>Market Data</strong><span>Colocated capture, nanosecond timestamps, full history, integrated</span></a></li>
+                </ul>
+              </div>
+              <div class="nav__grp nav__grp--engine">
+                <span class="nav__grphead">Quant engine <span class="grptag">Innovations</span></span>
+                <ul class="nav__sub">
+                  <li><a href="/products/feature-engineering/"><strong>Feature Engineering</strong><span>Feature library, option analytics, learned features</span></a></li>
+                  <li><a href="/products/simulation/"><strong>Simulation &amp; Backtesting</strong><span>Event-driven and order book simulation on CPU and GPU</span></a></li>
+                  <li><a href="/products/machine-learning/"><strong>Machine Learning &amp; RL</strong><span>Managed training, search and RL environments</span></a></li>
+                  <li><a href="/products/workflow/"><strong>Workflow</strong><span>Strategy pipelines as typed, versioned graphs</span></a></li>
+                </ul>
+              </div>
+              </div>
+              <a class="nav__all" href="/products/">All products <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </li>
+          <li><a href="/innovations/">Innovations</a></li>
+          <li><a href="/use-cases/">Use cases</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="nav__cta">
+        <a class="btn btn--sm" href="/access/" aria-current="page">Request access <span class="arrow" aria-hidden="true">→</span></a>
+        <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primaryLinks" id="navToggle">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="page-head">
+      <div class="wrap">
+        <span class="eyebrow">Early access</span>
+        <h1>Request early access</h1>
+        <p class="lede">Joseki is in early access with a small number of pilot teams. Tell us which venues, products and workloads you need, and we will reply with what is available and when.</p>
+      </div>
+    </section>
+
+    <section class="section wrap">
+      <div class="access">
+        <form class="form" id="accessForm" data-api="/api/access" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="nameError" />
+            <span class="field__error" id="nameError" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label for="email">Work email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="emailError" />
+            <span class="field__error" id="emailError" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label for="firm">Firm or team <span class="hint">optional</span></label>
+            <input id="firm" name="firm" type="text" autocomplete="organization" />
+          </div>
+          <div class="field">
+            <label for="role">Role <span class="hint">optional</span></label>
+            <input id="role" name="role" type="text" autocomplete="organization-title" />
+          </div>
+          <div class="field">
+            <label for="focus">Product of most interest</label>
+            <select id="focus" name="focus">
+              <option value="">Choose one</option>
+              <option>Market Data</option>
+              <option>Feature Engineering</option>
+              <option>Simulation and Backtesting</option>
+              <option>Machine Learning and RL</option>
+              <option>Workflow</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="size">Team size</label>
+            <select id="size" name="size">
+              <option value="">Choose one</option>
+              <option>Just me</option>
+              <option>2 to 10</option>
+              <option>11 to 50</option>
+              <option>More than 50</option>
+            </select>
+          </div>
+          <div class="field field--wide">
+            <label for="markets">Markets and venues <span class="hint">optional</span></label>
+            <input id="markets" name="markets" type="text" placeholder="For example: US equity options, European futures, event contracts" />
+          </div>
+          <div class="field field--wide">
+            <label for="notes">Workloads and requirements <span class="hint">optional</span></label>
+            <textarea id="notes" name="notes"></textarea>
+          </div>
+          <div class="field hp" aria-hidden="true">
+            <label for="website">Website</label>
+            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+          </div>
+          <div class="turnstile"><div class="cf-turnstile" data-sitekey="0x4AAAAAAFlNlVHSUCArlJ_8"></div></div>
+          <div class="form__foot">
+            <button class="btn" type="submit">Request access <span class="arrow" aria-hidden="true">→</span></button>
+            <p class="form__status" id="accessStatus" role="status">Sent to the Joseki team and used only to reply. If sending fails, the button opens your mail app instead.</p>
+          </div>
+        </form>
+
+        <aside aria-labelledby="pilotTitle">
+          <h2 class="aside-title" id="pilotTitle">What pilot teams receive</h2>
+          <ul class="aside-list">
+            <li><strong>Market data for the requested venues.</strong> Full-depth history with nanosecond timestamps, read in place by the simulator and models.</li>
+            <li><strong>Simulation at the required resolution.</strong> From full order book replay to daily bars, with configurable market models.</li>
+            <li><strong>Managed machine learning.</strong> GPU training, hyperparameter search and reinforcement-learning environments.</li>
+            <li><strong>Direct contact with the engineering team.</strong> Pilot requirements shape the release order.</li>
+          </ul>
+          <p class="proof__note">Or write to <a class="textlink" href="mailto:hi@joseki.ai?subject=Joseki%20early%20access">hi@joseki.ai</a>.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__row">
+      <a class="brand brand--foot" href="/" aria-label="Joseki home">
+        <img class="brand__logo" src="/img/logo.svg?v=16c0c2ed" alt="Joseki" width="57" height="22" />
+      </a>
+      <nav aria-label="Footer">
+        <ul class="foot__links">
+          <li><a href="/products/">Products</a></li>
+          <li><a href="/innovations/">Innovations</a></li>
+          <li><a href="/use-cases/">Use cases</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="foot__meta">
+        <a href="mailto:hi@joseki.ai">hi@joseki.ai</a>
+        <span>© 2026 Joseki</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/app.js" defer></script>
+  <script src="/js/access.js" defer></script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onTurnstileLoad&render=explicit" defer></script>
+</body>
+</html>

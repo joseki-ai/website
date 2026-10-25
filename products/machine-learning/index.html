@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!-- Joseki marketing owns this static page: the Machine Learning & RL product. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noarchive" />
+  <title>Machine Learning &amp; RL — Joseki</title>
+  <meta name="description" content="Managed GPU infrastructure for training, hyperparameter search and reinforcement learning on market data, with point-in-time datasets, environments built on the market simulator and reproducible runs." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="icon" href="/img/favicon-32.png?v=bb30afc0" sizes="32x32" type="image/png" />
+  <link rel="icon" href="/img/favicon.svg?v=612ca15e" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png?v=7920d79d" />
+</head>
+<body>
+  <header class="nav" id="nav" data-scrolled="false">
+    <div class="wrap nav__row">
+      <a class="brand" href="/" aria-label="Joseki home">
+        <img class="brand__logo" src="/img/logo.svg?v=16c0c2ed" alt="Joseki" width="67" height="26" />
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav__links" id="primaryLinks">
+          <li class="nav__group" id="productsGroup">
+            <button class="nav__menubtn" type="button" id="productsButton" aria-expanded="false" aria-controls="productsMenu" aria-current="true">Products <svg class="nav__chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3"/></svg></button>
+            <div class="nav__panel" id="productsMenu">
+              <div class="nav__groups">
+              <div class="nav__grp">
+                <span class="nav__grphead">Data</span>
+                <ul class="nav__sub">
+                  <li><a href="/products/market-data/"><strong>Market Data</strong><span>Colocated capture, nanosecond timestamps, full history, integrated</span></a></li>
+                </ul>
+              </div>
+              <div class="nav__grp nav__grp--engine">
+                <span class="nav__grphead">Quant engine <span class="grptag">Innovations</span></span>
+                <ul class="nav__sub">
+                  <li><a href="/products/feature-engineering/"><strong>Feature Engineering</strong><span>Feature library, option analytics, learned features</span></a></li>
+                  <li><a href="/products/simulation/"><strong>Simulation &amp; Backtesting</strong><span>Event-driven and order book simulation on CPU and GPU</span></a></li>
+                  <li><a href="/products/machine-learning/" aria-current="page"><strong>Machine Learning &amp; RL</strong><span>Managed training, search and RL environments</span></a></li>
+                  <li><a href="/products/workflow/"><strong>Workflow</strong><span>Strategy pipelines as typed, versioned graphs</span></a></li>
+                </ul>
+              </div>
+              </div>
+              <a class="nav__all" href="/products/">All products <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </li>
+          <li><a href="/innovations/">Innovations</a></li>
+          <li><a href="/use-cases/">Use cases</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="nav__cta">
+        <a class="btn btn--sm" href="/access/">Request access <span class="arrow" aria-hidden="true">→</span></a>
+        <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primaryLinks" id="navToggle">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="page-head">
+      <div class="wrap">
+        <span class="eyebrow">Products · Machine Learning &amp; RL</span>
+        <h1>Machine learning and reinforcement learning</h1>
+        <p class="lede">Managed GPU infrastructure for training, hyperparameter search and reinforcement learning on market data, with point-in-time datasets, environments built on the market simulator and reproducible runs.</p>
+        <div class="hero__actions">
+          <a class="btn" href="/access/">Request early access <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap">
+      <div class="blocks">
+        <div class="block" id="infrastructure">
+          <div class="block__head">
+            <span class="card__label">Infrastructure</span>
+            <h2>Datasets, compute and reproducibility</h2>
+            <p>Data preparation, GPU provisioning and run tracking are provided.</p>
+          </div>
+          <div class="block__body">
+            <div class="tiles">
+              <div class="tile"><span class="tile__code">datasets</span><h3>Point-in-time datasets</h3><p>Features and labels materialized from versioned market data, with purged and embargoed splits.</p></div>
+              <div class="tile"><span class="tile__code">compute</span><h3>Managed GPUs</h3><p>GPU instances with pinned drivers, CUDA and frameworks, and multi-GPU training.</p></div>
+              <div class="tile"><span class="tile__code">runs</span><h3>Reproducible runs</h3><p>Each run is pinned to its dataset versions, code, seed and environment.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="block" id="supervised">
+          <div class="block__head">
+            <span class="card__label">Supervised</span>
+            <h2>Supervised learning</h2>
+            <p>Predictive models trained on market labels, with validation methods suited to overlapping and autocorrelated samples.</p>
+          </div>
+          <div class="block__body">
+            <ul class="tags tags--accent"><li>PyTorch</li><li>JAX</li><li>gradient-boosted trees</li><li>MLPs</li><li>temporal convolutions</li><li>recurrent networks</li><li>transformers</li><li>state-space models</li></ul>
+            <ul class="tags"><li>purged k-fold cross-validation</li><li>embargo</li><li>walk-forward analysis</li><li>label design</li><li>sample weighting</li><li>distributed data-parallel training</li><li>mixed precision</li></ul>
+          </div>
+        </div>
+
+        <div class="block" id="rl">
+          <div class="block__head">
+            <span class="card__label">Reinforcement learning</span>
+            <h2>Reinforcement learning environments</h2>
+            <p>Vectorized GPU environments built on the market simulator, with queue position, latency and transaction costs in the loop. The replayed market does not react to the agent's orders; queue position is estimated from the back of the level, and market impact is a configurable model.</p>
+          </div>
+          <div class="block__body">
+            <figure class="art-figure"><img src="/img/learning.webp?v=104b4513" alt="" width="1200" height="600" loading="lazy" decoding="async" /></figure>
+            <ul class="tags tags--accent"><li>on-policy (PPO)</li><li>off-policy (SAC, DQN variants)</li><li>offline (CQL, IQL)</li><li>multi-agent settings</li></ul>
+            <ul class="tags"><li>reward shaping</li><li>inventory and risk penalties</li><li>curriculum over regimes</li><li>domain randomization</li></ul>
+          </div>
+        </div>
+
+        <div class="block" id="search">
+          <div class="block__head">
+            <span class="card__label">Search</span>
+            <h2>Hyperparameter and strategy parameter search</h2>
+            <p>Model hyperparameters and strategy parameters are searched against simulated results in parallel on GPUs, with out-of-sample scoring.</p>
+          </div>
+          <div class="block__body">
+            <ul class="tags tags--accent"><li>Bayesian optimization</li><li>evolution strategies (CMA-ES)</li><li>population-based training</li><li>multi-objective search</li><li>walk-forward analysis</li></ul>
+          </div>
+        </div>
+
+        <div class="block" id="deployment">
+          <div class="block__head">
+            <span class="card__label">Deployment</span>
+            <h2>Experiment tracking and deployment</h2>
+            <p>Experiments are tracked with full lineage, models are registered by version, and trained models export to standard inference formats.</p>
+          </div>
+          <div class="block__body">
+            <ul class="tags"><li>experiment tracking</li><li>model registry</li><li>lineage</li><li>ONNX export</li><li>TensorRT inference</li><li>SDK for custom models</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="access">
+      <div class="cta">
+        <div class="cta__text">
+          <h2>Get early access</h2>
+          <p>Joseki is onboarding a small number of pilot teams. Tell us which models, datasets and environments you need.</p>
+          <div class="hero__actions">
+            <a class="btn" href="/access/">Request early access <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="btn btn--ghost" href="/products/workflow/">Next: Workflow</a>
+          </div>
+        </div>
+        <div class="cta__art"><img src="/img/goban.webp?v=423a199f" alt="" width="760" height="640" loading="lazy" decoding="async" /></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__row">
+      <a class="brand brand--foot" href="/" aria-label="Joseki home">
+        <img class="brand__logo" src="/img/logo.svg?v=16c0c2ed" alt="Joseki" width="57" height="22" />
+      </a>
+      <nav aria-label="Footer">
+        <ul class="foot__links">
+          <li><a href="/products/">Products</a></li>
+          <li><a href="/innovations/">Innovations</a></li>
+          <li><a href="/use-cases/">Use cases</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="foot__meta">
+        <a href="mailto:hi@joseki.ai">hi@joseki.ai</a>
+        <span>© 2026 Joseki</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<!-- Joseki marketing owns this static page: the Simulation & Backtesting product. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noarchive" />
+  <title>Simulation &amp; Backtesting — Joseki</title>
+  <meta name="description" content="An event-driven market simulator for order-book, intraday and long-horizon strategies, with configurable fill, latency and transaction cost models, stress scenarios and GPU-parallel parameter sweeps." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="icon" href="/img/favicon-32.png?v=bb30afc0" sizes="32x32" type="image/png" />
+  <link rel="icon" href="/img/favicon.svg?v=612ca15e" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png?v=7920d79d" />
+</head>
+<body>
+  <header class="nav" id="nav" data-scrolled="false">
+    <div class="wrap nav__row">
+      <a class="brand" href="/" aria-label="Joseki home">
+        <img class="brand__logo" src="/img/logo.svg?v=16c0c2ed" alt="Joseki" width="67" height="26" />
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav__links" id="primaryLinks">
+          <li class="nav__group" id="productsGroup">
+            <button class="nav__menubtn" type="button" id="productsButton" aria-expanded="false" aria-controls="productsMenu" aria-current="true">Products <svg class="nav__chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3"/></svg></button>
+            <div class="nav__panel" id="productsMenu">
+              <div class="nav__groups">
+              <div class="nav__grp">
+                <span class="nav__grphead">Data</span>
+                <ul class="nav__sub">
+                  <li><a href="/products/market-data/"><strong>Market Data</strong><span>Colocated capture, nanosecond timestamps, full history, integrated</span></a></li>
+                </ul>
+              </div>
+              <div class="nav__grp nav__grp--engine">
+                <span class="nav__grphead">Quant engine <span class="grptag">Innovations</span></span>
+                <ul class="nav__sub">
+                  <li><a href="/products/feature-engineering/"><strong>Feature Engineering</strong><span>Feature library, option analytics, learned features</span></a></li>
+                  <li><a href="/products/simulation/" aria-current="page"><strong>Simulation &amp; Backtesting</strong><span>Event-driven and order book simulation on CPU and GPU</span></a></li>
+                  <li><a href="/products/machine-learning/"><strong>Machine Learning &amp; RL</strong><span>Managed training, search and RL environments</span></a></li>
+                  <li><a href="/products/workflow/"><strong>Workflow</strong><span>Strategy pipelines as typed, versioned graphs</span></a></li>
+                </ul>
+              </div>
+              </div>
+              <a class="nav__all" href="/products/">All products <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </li>
+          <li><a href="/innovations/">Innovations</a></li>
+          <li><a href="/use-cases/">Use cases</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="nav__cta">
+        <a class="btn btn--sm" href="/access/">Request access <span class="arrow" aria-hidden="true">→</span></a>
+        <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primaryLinks" id="navToggle">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="page-head">
+      <div class="wrap">
+        <span class="eyebrow">Products · Simulation &amp; Backtesting</span>
+        <h1>Market simulation and backtesting</h1>
+        <p class="lede">An event-driven simulator for order-book, intraday and long-horizon strategies, with configurable fill, latency and transaction cost models, stress scenarios and GPU-parallel parameter sweeps.</p>
+        <div class="hero__actions">
+          <a class="btn" href="/access/">Request early access <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap">
+      <div class="blocks">
+        <div class="block" id="modes">
+          <div class="block__head">
+            <span class="card__label">Modes</span>
+            <h2>Simulation modes</h2>
+            <p>The same strategy code runs at each level of detail, from full order book replay to daily bars.</p>
+          </div>
+          <div class="block__body">
+            <div class="tiles tiles--2">
+              <div class="tile"><span class="tile__code">order book</span><h3>Order book replay</h3><p>Full-depth replay for market making and high-frequency strategies, with queue position, latency, cancels and partial fills.</p></div>
+              <div class="tile"><span class="tile__code">event-driven</span><h3>Event-driven</h3><p>Trades and quotes processed in sequence for intraday strategies, with fills against recorded quotes after latency.</p></div>
+              <div class="tile"><span class="tile__code">bars</span><h3>Bar-based</h3><p>Daily to monthly bars for portfolio strategies, with rebalancing, transaction costs, financing and borrow.</p></div>
+              <div class="tile"><span class="tile__code">multi-asset</span><h3>Multi-asset</h3><p>Many instruments and venues under shared capital, margin and risk limits.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="block" id="market-model">
+          <div class="block__head">
+            <span class="card__label">Market model</span>
+            <h2>Fill, latency and cost models</h2>
+            <p>Fill, latency and transaction cost assumptions are explicit parameters, set per venue and per run. Defaults are conservative.</p>
+          </div>
+          <div class="block__body">
+            <div class="tiles">
+              <div class="tile"><span class="tile__code">fills</span><h3>Fill models</h3><p>FIFO and pro-rata matching per venue, queue position estimation from price-level data, probabilistic and partial fills.</p></div>
+              <div class="tile"><span class="tile__code">latency</span><h3>Latency models</h3><p>Feed, order entry and order acknowledgement latencies, fixed or sampled from measured distributions.</p></div>
+              <div class="tile"><span class="tile__code">costs</span><h3>Transaction costs</h3><p>Fee schedules and tiers, maker rebates, temporary and permanent market impact, slippage for bar backtests, financing and borrow.</p></div>
+              <div class="tile"><span class="tile__code">orders</span><h3>Order types, time in force and instructions</h3><p>Limit, market, stop and stop-limit orders; day, GTC, GTD, IOC and FOK time in force; post-only, reduce-only and iceberg instructions.</p></div>
+              <div class="tile"><span class="tile__code">venue rules</span><h3>Venue rules</h3><p>Tick and lot sizes, minimum quantities, rate limits, auctions and settlement.</p></div>
+              <div class="tile"><span class="tile__code">capital</span><h3>Capital and risk</h3><p>Margin, position and exposure limits shared across strategies.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="block" id="stress">
+          <div class="block__head">
+            <span class="card__label">Stress</span>
+            <h2>Stress scenarios and validation</h2>
+            <p>Replayed markets can be modified to test a strategy under adverse conditions. Results are evaluated with out-of-sample and resampling methods.</p>
+          </div>
+          <div class="block__body">
+            <figure class="art-figure"><img src="/img/simulation.webp?v=7105caaf" alt="" width="1200" height="600" loading="lazy" decoding="async" /></figure>
+            <ul class="tags tags--accent"><li>latency spikes</li><li>reduced liquidity</li><li>wider spreads</li><li>price gaps</li><li>fee changes</li><li>venue outages</li><li>historical stress windows</li></ul>
+            <ul class="tags"><li>walk-forward analysis</li><li>out-of-sample periods</li><li>block bootstrap</li><li>parameter sensitivity</li><li>multiple-testing adjustment</li></ul>
+          </div>
+        </div>
+
+        <div class="block" id="speed">
+          <div class="block__head">
+            <span class="card__label">Scale</span>
+            <h2>GPU-parallel parameter sweeps</h2>
+            <p>Parameter sweeps, scenario sets and multi-market runs execute in parallel on GPUs. A CPU reference engine certifies that the GPU engine produces the same sequence of events.</p>
+          </div>
+          <div class="block__body">
+            <figure class="art-figure"><img src="/img/gpu.webp?v=807cf720" alt="" width="1200" height="600" loading="lazy" decoding="async" /></figure>
+            <ul class="points">
+              <li><strong>Deterministic.</strong> Identical data, configuration and build produce identical results.</li>
+              <li><strong>Traceable.</strong> Each run records the dataset versions, configuration and build it used.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="block" id="accounting">
+          <div class="block__head">
+            <span class="card__label">Accounting</span>
+            <h2>Fill-level accounting and analytics</h2>
+            <p>Results are produced as a fill-level ledger rather than an equity curve alone.</p>
+          </div>
+          <div class="block__body">
+            <figure class="art-figure"><img src="/img/backtest.webp?v=d7bbd80a" alt="" width="1200" height="600" loading="lazy" decoding="async" /></figure>
+            <ul class="tags"><li>positions</li><li>fees and rebates</li><li>financing and borrow</li><li>settlement</li><li>realized and unrealized P&amp;L</li><li>exposure</li><li>turnover</li><li>drawdown</li><li>attribution</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="access">
+      <div class="cta">
+        <div class="cta__text">
+          <h2>Get early access</h2>
+          <p>Joseki is onboarding a small number of pilot teams. Tell us which markets and simulation modes you need.</p>
+          <div class="hero__actions">
+            <a class="btn" href="/access/">Request early access <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="btn btn--ghost" href="/products/machine-learning/">Next: Machine Learning &amp; RL</a>
+          </div>
+        </div>
+        <div class="cta__art"><img src="/img/goban.webp?v=423a199f" alt="" width="760" height="640" loading="lazy" decoding="async" /></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__row">
+      <a class="brand brand--foot" href="/" aria-label="Joseki home">
+        <img class="brand__logo" src="/img/logo.svg?v=16c0c2ed" alt="Joseki" width="57" height="22" />
+      </a>
+      <nav aria-label="Footer">
+        <ul class="foot__links">
+          <li><a href="/products/">Products</a></li>
+          <li><a href="/innovations/">Innovations</a></li>
+          <li><a href="/use-cases/">Use cases</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="foot__meta">
+        <a href="mailto:hi@joseki.ai">hi@joseki.ai</a>
+        <span>© 2026 Joseki</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/app.js" defer></script>
+</body>
+</html>

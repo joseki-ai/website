@@ -1,7 +1,7 @@
 // Website-owned early-access form. With an endpoint configured on the form
 // (data-api), the answers are posted to it as JSON with a Turnstile token;
 // otherwise, or if that request fails, the form opens an email in the
-// visitor's mail app addressed to hi@joseki.ai. No tracking.
+// visitor's mail app addressed to access@joseki.ai. No tracking.
 (function () {
   "use strict";
 
@@ -22,7 +22,7 @@
   };
   var status = document.getElementById("accessStatus");
   var submit = form.querySelector("button[type=submit]");
-  var ADDRESS = "hi@joseki.ai";
+  var ADDRESS = "access@joseki.ai";
   var FIELDS = ["name", "email", "firm", "role", "focus", "size", "markets", "notes"];
 
   var value = function (name) {
@@ -88,13 +88,14 @@
         });
       })
       .then(function () {
-        setStatus("ok", "Sent. We will reply to " + a.email + ".");
+        setStatus("ok", "Thank you so much. We have received your message and will get back to you soon.");
         if (form.reset) form.reset();
         if (window.turnstile && window.turnstile.reset) window.turnstile.reset();
       })
       .catch(function (err) {
         var reason = err && err.message && !/fetch/i.test(err.message) ? err.message : "network";
-        openMail(a, "error", "Sending failed (" + reason + "), so your mail app should open with the email ready to send. If it does not, write to " + ADDRESS + ".");
+        if (window.console && console.warn) console.warn("access form: " + reason);
+        openMail(a, "error", "Something went wrong. Please send your message directly to " + ADDRESS + ".");
       })
       .then(function () { if (submit) submit.disabled = false; });
   });

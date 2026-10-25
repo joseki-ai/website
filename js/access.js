@@ -1,7 +1,7 @@
 // Website-owned early-access form. With an endpoint configured on the form
 // (data-api), the answers are posted to it as JSON with a Turnstile token;
 // otherwise, or if that request fails, the form opens an email in the
-// visitor's mail app addressed to access@joseki.ai. No tracking.
+// visitor's mail app addressed to hi@joseki.ai. No tracking.
 (function () {
   "use strict";
 
@@ -22,7 +22,7 @@
   };
   var status = document.getElementById("accessStatus");
   var submit = form.querySelector("button[type=submit]");
-  var ADDRESS = "access@joseki.ai";
+  var ADDRESS = "hi@joseki.ai";
   var FIELDS = ["name", "email", "firm", "role", "focus", "size", "markets", "notes"];
 
   var value = function (name) {

@@ -50,8 +50,8 @@
     var subject = "Joseki early access" + (a.firm ? " - " + a.firm : "");
     return "mailto:" + ADDRESS + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(lines.join("\n").trim() + "\n");
   };
-  var openMail = function (a, message) {
-    setStatus("ok", message);
+  var openMail = function (a, state, message) {
+    setStatus(state, message);
     window.location.href = mailto(a);
   };
 
@@ -72,7 +72,7 @@
 
     var api = form.dataset.api;
     if (!api || typeof window.fetch !== "function") {
-      openMail(a, "Your mail app should open with the email ready to send. If it does not, write to " + ADDRESS + ".");
+      openMail(a, "ok", "Your mail app should open with the email ready to send. If it does not, write to " + ADDRESS + ".");
       return;
     }
     var token = form.querySelector('[name="cf-turnstile-response"]');
@@ -84,7 +84,7 @@
       .then(function (response) {
         return response.json().catch(function () { return {}; }).then(function (data) {
           if (response.ok && data && data.ok) return data;
-          throw new Error(data && data.error ? data.error : "http " + response.status);
+          throw new Error(data && data.error ? data.error + (data.detail ? ": " + data.detail : "") : "http " + response.status);
         });
       })
       .then(function () {
@@ -94,7 +94,7 @@
       })
       .catch(function (err) {
         var reason = err && err.message && !/fetch/i.test(err.message) ? err.message : "network";
-        openMail(a, "Sending failed (" + reason + "), so your mail app should open with the email ready to send. If it does not, write to " + ADDRESS + ".");
+        openMail(a, "error", "Sending failed (" + reason + "), so your mail app should open with the email ready to send. If it does not, write to " + ADDRESS + ".");
       })
       .then(function () { if (submit) submit.disabled = false; });
   });

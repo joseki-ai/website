@@ -81,15 +81,20 @@
     setStatus("loading", "Sending\u2026");
     if (submit) submit.disabled = true;
     window.fetch(api, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(a) })
-      .then(function (response) { return response.ok ? response.json() : Promise.reject(new Error("http " + response.status)); })
-      .then(function (data) {
-        if (!data || !data.ok) throw new Error("rejected");
+      .then(function (response) {
+        return response.json().catch(function () { return {}; }).then(function (data) {
+          if (response.ok && data && data.ok) return data;
+          throw new Error(data && data.error ? data.error : "http " + response.status);
+        });
+      })
+      .then(function () {
         setStatus("ok", "Sent. We will reply to " + a.email + ".");
         if (form.reset) form.reset();
         if (window.turnstile && window.turnstile.reset) window.turnstile.reset();
       })
-      .catch(function () {
-        openMail(a, "Sending failed, so your mail app should open with the email ready to send. If it does not, write to " + ADDRESS + ".");
+      .catch(function (err) {
+        var reason = err && err.message && !/fetch/i.test(err.message) ? err.message : "network";
+        openMail(a, "Sending failed (" + reason + "), so your mail app should open with the email ready to send. If it does not, write to " + ADDRESS + ".");
       })
       .then(function () { if (submit) submit.disabled = false; });
   });

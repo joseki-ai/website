@@ -452,21 +452,6 @@ a { color: inherit; }
 
 /* ---------- To confirm · facts only the founder can supply ---------- */
 
-/* ---------- Status chips · Live / Pilot / Roadmap ---------- */
-.chip {
-  display: inline-flex; align-items: center; gap: 0.4em;
-  padding: 0.1em 0.6em;
-  font-family: var(--font-mono); font-size: var(--text-2xs); font-weight: 500;
-  white-space: nowrap; letter-spacing: 0.02em;
-  border-radius: var(--radius-pill);
-  border: var(--rule-hair) solid currentColor;
-}
-.chip::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
-.chip--ready { color: var(--color-ok-2); background: var(--color-ok-ghost); border-color: var(--color-ok-ghost); }
-.chip--proto { color: var(--color-accent-2); background: var(--color-accent-ghost); border-color: var(--color-accent-ghost); }
-.chip--roadmap { color: var(--color-ink-3); background: transparent; border-color: var(--color-rule-2); }
-.chip--roadmap::before { background: transparent; border: 1.5px solid currentColor; width: 5px; height: 5px; }
-
 /* ---------- Spec sheet · F3 tabular rows with hairlines ---------- */
 .spec { width: 100%; border-collapse: collapse; font-size: var(--text-sm); }
 .spec caption { text-align: left; font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-ink-3); padding-bottom: var(--space-sm); }
@@ -541,7 +526,6 @@ a { color: inherit; }
 .pipe li::before { content: ""; position: absolute; top: -8px; left: var(--space-sm); width: 13px; height: 13px; border-radius: 50%; background: var(--color-surface); border: 3px solid var(--color-accent); }
 .pipe li:nth-child(n+6)::before { border-color: var(--color-accent-soft); }
 .pipe strong { display: block; font-family: var(--font-display); font-size: var(--text-sm); color: var(--color-ink); }
-.pipe .chip { margin-top: var(--space-2xs); }
 
 /* ---------- Stories · use cases as problem → in Joseki → result ---------- */
 .stories { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-lg); }
@@ -552,7 +536,6 @@ a { color: inherit; }
   border: var(--rule-hair) solid var(--color-rule);
   border-radius: var(--radius-lg);
 }
-.story > .chip { align-self: flex-start; }
 .story h3 { font-size: var(--text-2xl); margin-top: var(--space-sm); }
 .story > p { margin-top: var(--space-sm); color: var(--color-ink-2); }
 .story__flow { margin: var(--space-lg) 0 0; display: grid; gap: var(--space-sm); }
@@ -701,14 +684,12 @@ a { color: inherit; }
 .faq__a p + p { margin-top: var(--space-sm); }
 .faq__a a { color: var(--color-accent-2); text-underline-offset: 3px; }
 .faq__level { display: block; margin: var(--space-xl) 0 0; padding-bottom: var(--space-xs); font-family: var(--font-mono); font-size: var(--text-2xs); color: var(--color-ink-3); letter-spacing: 0.04em; text-transform: uppercase; }
-.card__label .chip, .split__text .card__label .chip { margin-left: var(--space-xs); vertical-align: 1px; }
 @media (max-width: 40rem) {
   .faq summary { grid-template-columns: 2rem minmax(0, 1fr) 1.25rem; gap: var(--space-sm); font-size: var(--text-lg); }
   .faq__a { padding: 0 0 var(--space-lg) calc(2rem + var(--space-sm)); }
 }
 
-/* ---------- Product pages · status beside the eyebrow, wide art, stated limits ---------- */
-.page-head .chip { margin-left: var(--space-xs); vertical-align: 2px; }
+/* ---------- Product pages · wide art, stated limits ---------- */
 .art-figure { margin: 0; padding: var(--space-lg); background: var(--color-surface); border: var(--rule-hair) solid var(--color-rule); border-radius: var(--radius-lg); }
 .art-figure img { display: block; width: 100%; height: auto; }
 .art-figure figcaption { margin-top: var(--space-sm); font-size: var(--text-sm); color: var(--color-ink-3); }
